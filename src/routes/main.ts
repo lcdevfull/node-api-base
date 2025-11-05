@@ -1,12 +1,8 @@
 import { Router } from "express";
+import { ping } from "../controllers/ping";
 
 const router = Router();
 
-router.get("/ping", (req, res) => {
-  res.json({
-    pong: true,
-    password: process.env.PASS,
-  });
-});
+router.get("/ping", ping);
 
 export default router;
